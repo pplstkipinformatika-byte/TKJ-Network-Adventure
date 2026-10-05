@@ -1,0 +1,319 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "title": "Kenali Hardware",
+      "icon": "🖥️",
+      "description": "Kenali komponen komputer dan fungsi dasarnya.",
+      "questions": [
+        {
+          "question": "Komponen yang berfungsi sebagai tempat pemrosesan utama pada komputer adalah ...",
+          "icon": "🧠",
+          "options": ["CPU / Processor", "Monitor", "Keyboard", "Speaker"],
+          "answer": 0,
+          "explanation": "CPU (Central Processing Unit) menjalankan instruksi dan memproses data."
+        },
+        {
+          "question": "Komponen yang menyimpan data secara permanen dan menggunakan chip flash adalah ...",
+          "icon": "💾",
+          "options": ["RAM", "SSD", "Heatsink", "Power Supply"],
+          "answer": 1,
+          "explanation": "SSD menyimpan data secara permanen dan menggunakan media flash memory."
+        },
+        {
+          "question": "Perangkat yang digunakan untuk menampilkan hasil proses komputer adalah ...",
+          "icon": "🖥️",
+          "options": ["Router", "Mouse", "Monitor", "Switch"],
+          "answer": 2,
+          "explanation": "Monitor menampilkan informasi visual dari komputer."
+        },
+        {
+          "question": "Perangkat yang menyediakan daya listrik ke komponen komputer adalah ...",
+          "icon": "⚡",
+          "options": ["PSU", "NIC", "RAM", "HDD"],
+          "answer": 0,
+          "explanation": "PSU (Power Supply Unit) mengubah dan menyalurkan daya listrik ke komponen komputer."
+        },
+        {
+          "question": "Komponen yang berfungsi menyimpan data sementara saat komputer sedang digunakan adalah ...",
+          "icon": "🧩",
+          "options": ["RAM", "SSD", "PSU", "Monitor"],
+          "answer": 0,
+          "explanation": "RAM menyimpan data sementara yang sedang digunakan oleh sistem dan aplikasi."
+        },
+        {
+          "question": "Perangkat yang digunakan untuk memasukkan teks ke komputer adalah ...",
+          "icon": "⌨️",
+          "options": ["Keyboard", "Monitor", "Speaker", "Projector"],
+          "answer": 0,
+          "explanation": "Keyboard digunakan untuk memasukkan huruf, angka, dan perintah ke komputer."
+        },
+        {
+          "question": "Perangkat yang digunakan untuk menggerakkan pointer pada layar adalah ...",
+          "icon": "🖱️",
+          "options": ["Mouse", "Printer", "Scanner", "Router"],
+          "answer": 0,
+          "explanation": "Mouse digunakan untuk menggerakkan pointer dan melakukan berbagai perintah pada komputer."
+        },
+        {
+          "question": "Komponen yang berfungsi mendinginkan processor adalah ...",
+          "icon": "❄️",
+          "options": ["Heatsink dan fan", "RAM", "SSD", "Keyboard"],
+          "answer": 0,
+          "explanation": "Heatsink dan fan membantu membuang panas dari processor."
+        },
+        {
+          "question": "Perangkat yang digunakan untuk mencetak dokumen dari komputer adalah ...",
+          "icon": "🖨️",
+          "options": ["Printer", "Router", "RAM", "CPU"],
+          "answer": 0,
+          "explanation": "Printer menghasilkan dokumen atau gambar dalam bentuk cetak."
+        },
+        {
+          "question": "Papan utama tempat berbagai komponen komputer terpasang disebut ...",
+          "icon": "🔧",
+          "options": ["Motherboard", "Monitor", "Keyboard", "Speaker"],
+          "answer": 0,
+          "explanation": "Motherboard merupakan papan utama yang menghubungkan berbagai komponen komputer."
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "title": "Misi Kabel UTP",
+      "icon": "🔌",
+      "description": "Pelajari warna kabel straight dan standar T568B.",
+      "questions": [
+        {
+          "question": "Pada standar T568B, kabel pertama adalah ...",
+          "icon": "🔌",
+          "options": ["Putih-oranye", "Putih-hijau", "Putih-biru", "Oranye"],
+          "answer": 0,
+          "explanation": "Urutan pertama T568B adalah putih-oranye."
+        },
+        {
+          "question": "Fungsi konektor RJ45 pada kabel UTP adalah ...",
+          "icon": "🔗",
+          "options": ["Menyimpan IP address", "Menghubungkan kabel ke port jaringan", "Mendinginkan router", "Menguatkan sinyal Wi-Fi"],
+          "answer": 1,
+          "explanation": "RJ45 menjadi konektor fisik agar kabel UTP dapat terhubung ke port Ethernet."
+        },
+        {
+          "question": "Kabel straight-through biasanya digunakan untuk menghubungkan ...",
+          "icon": "↔️",
+          "options": ["Perangkat sejenis dalam skenario lama", "PC ke switch", "RAM ke motherboard", "Monitor ke keyboard"],
+          "answer": 1,
+          "explanation": "Kabel straight umum digunakan untuk koneksi perangkat yang berbeda jenis, misalnya PC ke switch."
+        },
+        {
+          "question": "Alat untuk memasang konektor RJ45 ke kabel UTP adalah ...",
+          "icon": "🛠️",
+          "options": ["Crimping tool", "Multimeter", "Obeng plus", "Flashdisk"],
+          "answer": 0,
+          "explanation": "Crimping tool digunakan untuk menjepit pin RJ45 agar terpasang pada kabel."
+        },
+        {
+          "question": "Pada standar T568B, kabel kedua adalah ...",
+          "icon": "🟠",
+          "options": ["Oranye", "Hijau", "Biru", "Cokelat"],
+          "answer": 0,
+          "explanation": "Urutan kedua T568B adalah oranye."
+        },
+        {
+          "question": "Pada standar T568B, kabel ketiga adalah ...",
+          "icon": "🟢",
+          "options": ["Putih-hijau", "Putih-biru", "Putih-cokelat", "Putih-oranye"],
+          "answer": 0,
+          "explanation": "Urutan ketiga T568B adalah putih-hijau."
+        },
+        {
+          "question": "Pada standar T568B, kabel keempat adalah ...",
+          "icon": "🔵",
+          "options": ["Biru", "Oranye", "Hijau", "Cokelat"],
+          "answer": 0,
+          "explanation": "Urutan keempat T568B adalah biru."
+        },
+        {
+          "question": "Jumlah kabel tembaga yang terdapat di dalam kabel UTP kategori umum adalah ...",
+          "icon": "🧵",
+          "options": ["8", "4", "6", "10"],
+          "answer": 0,
+          "explanation": "Kabel UTP Ethernet umum memiliki 8 konduktor tembaga yang tersusun menjadi 4 pasang."
+        },
+        {
+          "question": "Fungsi utama kabel UTP dalam jaringan komputer adalah ...",
+          "icon": "🌐",
+          "options": ["Menghubungkan perangkat untuk komunikasi data", "Menyimpan data", "Mendinginkan komputer", "Menghasilkan listrik"],
+          "answer": 0,
+          "explanation": "Kabel UTP digunakan sebagai media transmisi data antarperangkat jaringan."
+        },
+        {
+          "question": "Alat yang digunakan untuk mengecek apakah susunan kabel UTP sudah benar adalah ...",
+          "icon": "🔎",
+          "options": ["LAN Tester", "Printer", "Scanner", "Speaker"],
+          "answer": 0,
+          "explanation": "LAN Tester digunakan untuk memeriksa urutan dan koneksi kabel jaringan."
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "title": "Bangun Jaringan",
+      "icon": "🌐",
+      "description": "Pahami perangkat jaringan, IP address, gateway, dan subnet mask.",
+      "questions": [
+        {
+          "question": "Perangkat yang meneruskan paket antarjaringan adalah ...",
+          "icon": "🌐",
+          "options": ["Router", "Keyboard", "Monitor", "Printer"],
+          "answer": 0,
+          "explanation": "Router meneruskan paket data antarjaringan yang berbeda."
+        },
+        {
+          "question": "Switch umumnya digunakan untuk ...",
+          "icon": "🔀",
+          "options": ["Menghubungkan banyak perangkat dalam LAN", "Menyimpan sistem operasi", "Mengubah listrik AC menjadi DC", "Mencetak dokumen"],
+          "answer": 0,
+          "explanation": "Switch menghubungkan perangkat jaringan dalam satu jaringan lokal (LAN)."
+        },
+        {
+          "question": "Alamat seperti 192.168.1.10 merupakan contoh ...",
+          "icon": "🏷️",
+          "options": ["MAC address", "IP address", "SSID", "DNS record"],
+          "answer": 1,
+          "explanation": "192.168.1.10 adalah contoh alamat IPv4."
+        },
+        {
+          "question": "Default gateway biasanya menunjuk ke ...",
+          "icon": "🚪",
+          "options": ["Perangkat yang menjadi jalan keluar menuju jaringan lain", "Nama komputer", "Jenis kabel", "Ukuran RAM"],
+          "answer": 0,
+          "explanation": "Default gateway adalah perangkat, biasanya router, yang menjadi jalur menuju jaringan lain."
+        },
+        {
+          "question": "Kepanjangan dari LAN adalah ...",
+          "icon": "🏢",
+          "options": ["Local Area Network", "Large Area Network", "Local Access Node", "Link Area Network"],
+          "answer": 0,
+          "explanation": "LAN adalah singkatan dari Local Area Network, yaitu jaringan dalam area terbatas."
+        },
+        {
+          "question": "Perangkat yang biasanya menyediakan koneksi Wi-Fi dalam jaringan adalah ...",
+          "icon": "📶",
+          "options": ["Access Point", "Printer", "Keyboard", "UPS"],
+          "answer": 0,
+          "explanation": "Access Point menyediakan akses jaringan nirkabel atau Wi-Fi."
+        },
+        {
+          "question": "Subnet mask 255.255.255.0 umumnya setara dengan prefix ...",
+          "icon": "🧮",
+          "options": ["/24", "/16", "/8", "/32"],
+          "answer": 0,
+          "explanation": "Subnet mask 255.255.255.0 memiliki 24 bit jaringan sehingga ditulis sebagai /24."
+        },
+        {
+          "question": "Perangkat yang memiliki alamat MAC address adalah ...",
+          "icon": "🔖",
+          "options": ["Network Interface Card (NIC)", "Monitor", "Heatsink", "PSU"],
+          "answer": 0,
+          "explanation": "NIC atau adapter jaringan memiliki MAC address sebagai identitas pada jaringan."
+        },
+        {
+          "question": "DNS digunakan untuk ...",
+          "icon": "🔤",
+          "options": ["Menerjemahkan nama domain menjadi alamat IP", "Mendinginkan server", "Membuat kabel jaringan", "Mengatur resolusi monitor"],
+          "answer": 0,
+          "explanation": "DNS membantu menerjemahkan nama domain seperti google.com menjadi alamat IP."
+        },
+        {
+          "question": "SSID pada jaringan Wi-Fi adalah ...",
+          "icon": "📡",
+          "options": ["Nama jaringan Wi-Fi", "Alamat MAC router", "Password komputer", "Jenis kabel LAN"],
+          "answer": 0,
+          "explanation": "SSID adalah nama yang digunakan untuk mengidentifikasi suatu jaringan Wi-Fi."
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "title": "PC Doctor",
+      "icon": "🧰",
+      "description": "Cari sumber masalah jaringan dan pilih solusi yang tepat.",
+      "questions": [
+        {
+          "question": "PC menyala tetapi tidak bisa terhubung ke jaringan. Langkah awal yang masuk akal adalah ...",
+          "icon": "🩺",
+          "options": ["Memeriksa kabel LAN dan indikator port", "Menghapus semua file", "Mengganti monitor", "Memformat SSD"],
+          "answer": 0,
+          "explanation": "Pemeriksaan fisik adalah langkah awal troubleshooting sebelum masuk ke konfigurasi."
+        },
+        {
+          "question": "Perintah Windows untuk melihat konfigurasi IP adalah ...",
+          "icon": "⌨️",
+          "options": ["ipconfig", "format", "mkdir", "taskkill"],
+          "answer": 0,
+          "explanation": "ipconfig menampilkan informasi konfigurasi jaringan pada Windows."
+        },
+        {
+          "question": "Jika PC memiliki IP 169.254.x.x, salah satu kemungkinan adalah ...",
+          "icon": "⚠️",
+          "options": ["Gagal mendapatkan IP dari DHCP", "SSD terlalu penuh", "Monitor rusak", "Keyboard tidak terdeteksi"],
+          "answer": 0,
+          "explanation": "Alamat 169.254.x.x (APIPA) dapat muncul ketika perangkat gagal memperoleh konfigurasi IPv4 dari DHCP."
+        },
+        {
+          "question": "Perintah yang umum digunakan untuk menguji keterjangkauan alamat jaringan adalah ...",
+          "icon": "📡",
+          "options": ["ping", "copy", "del", "cls"],
+          "answer": 0,
+          "explanation": "ping mengirim ICMP Echo Request untuk menguji konektivitas ke alamat tujuan."
+        },
+        {
+          "question": "Jika kabel LAN terpasang tetapi lampu indikator port tidak menyala, hal pertama yang dapat diperiksa adalah ...",
+          "icon": "💡",
+          "options": ["Kabel dan konektor jaringan", "Wallpaper desktop", "Volume speaker", "Resolusi monitor"],
+          "answer": 0,
+          "explanation": "Lampu port yang tidak menyala dapat menunjukkan masalah pada koneksi fisik seperti kabel atau konektor."
+        },
+        {
+          "question": "Perintah Windows yang dapat digunakan untuk menguji jalur koneksi menuju suatu tujuan adalah ...",
+          "icon": "🛣️",
+          "options": ["tracert", "notepad", "calc", "dir"],
+          "answer": 0,
+          "explanation": "tracert digunakan untuk melihat jalur yang dilalui paket menuju alamat tujuan."
+        },
+        {
+          "question": "Jika komputer tidak mendapatkan alamat IP secara otomatis, salah satu layanan yang perlu diperiksa adalah ...",
+          "icon": "📋",
+          "options": ["DHCP", "Bluetooth", "Print Spooler", "Audio Service"],
+          "answer": 0,
+          "explanation": "DHCP bertugas memberikan konfigurasi IP secara otomatis kepada perangkat jaringan."
+        },
+        {
+          "question": "Jika hasil ping ke 127.0.0.1 berhasil, hal tersebut menunjukkan ...",
+          "icon": "🔄",
+          "options": ["TCP/IP pada komputer dapat merespons secara lokal", "Internet pasti aktif", "Router pasti rusak", "Kabel LAN pasti putus"],
+          "answer": 0,
+          "explanation": "127.0.0.1 adalah alamat loopback yang digunakan untuk menguji stack jaringan secara lokal."
+        },
+        {
+          "question": "Saat internet tidak dapat digunakan tetapi komputer lain dalam LAN masih bisa terhubung, salah satu hal yang perlu diperiksa adalah ...",
+          "icon": "🌍",
+          "options": ["Default gateway", "Keyboard", "Printer", "RAM"],
+          "answer": 0,
+          "explanation": "Default gateway digunakan sebagai jalur dari jaringan lokal menuju jaringan lain atau internet."
+        },
+        {
+          "question": "Salah satu langkah sederhana untuk mengatasi koneksi jaringan yang bermasalah adalah ...",
+          "icon": "🔄",
+          "options": ["Menonaktifkan lalu mengaktifkan kembali adapter jaringan", "Menghapus folder Windows", "Melepas RAM tanpa mematikan komputer", "Mengganti casing"],
+          "answer": 0,
+          "explanation": "Restart atau disable-enable adapter jaringan dapat membantu menyegarkan koneksi dan konfigurasi jaringan."
+        }
+      ]
+    }
+  ]
+}

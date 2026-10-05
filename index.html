@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TKJ Network Adventure - game pembelajaran interaktif untuk siswa TKJ." />
+  <title>TKJ Network Adventure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">TKJ</div>
+        <div>
+          <strong>TKJ Network Adventure</strong>
+          <span>Game Pembelajaran Teknik Komputer & Jaringan</span>
+        </div>
+      </div>
+      <div class="top-actions">
+        <div id="userBadge" class="user-badge" hidden aria-live="polite">👤 <span id="userNameText"></span></div>
+        <button id="soundToggle" class="icon-btn" type="button" aria-label="Nyalakan atau matikan suara">🔊</button>
+        <button id="resetProgress" class="ghost-btn" type="button">Reset</button>
+      </div>
+    </header>
+
+    <main id="screen" class="screen" aria-live="polite"></main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <footer class="footer">
+      <span>Project pembelajaran TKJ</span>
+      <span>•</span>
+      <span>HTML + CSS + JavaScript</span>
+    </footer>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

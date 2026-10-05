@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ular Tangga TKJ — Game Edukasi Jaringan Komputer</title>
+<meta name="description" content="Game edukasi ular tangga dua pemain bertema Teknik Komputer dan Jaringan untuk siswa kelas 11 Fase E.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ===== HEADER ===== -->
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="30" height="30" fill="none">
+          <circle cx="24" cy="10" r="5" fill="currentColor"/>
+          <circle cx="9" cy="34" r="5" fill="currentColor"/>
+          <circle cx="39" cy="34" r="5" fill="currentColor"/>
+          <path d="M24 15 L24 24 L9 24 L9 29" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          <path d="M24 15 L24 24 L39 24 L39 29" stroke="currentColor" stroke-width="2.5" fill="none"/>
+        </svg>
+      </span>
+      <div class="brand-text">
+        <h1>Ular Tangga TKJ</h1>
+        <p>Uji Pengetahuan Jaringan Komputer Sambil Bermain!</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="btnBackToMain" class="icon-btn" type="button" title="Kembali ke TKJ Network Adventure">
+        <span aria-hidden="true">🏠</span><span class="icon-btn-label">Menu Utama</span>
+      </button>
+      <button id="btnRules" class="icon-btn" type="button" aria-haspopup="dialog">
+        <span aria-hidden="true">📖</span><span class="icon-btn-label">Aturan Main</span>
+      </button>
+      <button id="btnSound" class="icon-btn" type="button" aria-pressed="true" title="Aktif/nonaktifkan suara">
+        <span id="soundIcon" aria-hidden="true">🔊</span><span class="icon-btn-label">Suara</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SETUP OVERLAY ===== -->
+  <div id="setupOverlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="setupTitle">
+    <div class="overlay-panel setup-panel">
+      <span class="panel-eyebrow">Sebelum mulai</span>
+      <h2 id="setupTitle">Siapkan dua pemain</h2>
+      <p class="panel-desc">Isi nama pemain, lalu jalankan node menuju petak 100. Setiap kali berhenti di petak bertanda <strong>❓</strong>, jawab soal jaringan komputer untuk membuktikan posisimu.</p>
+
+      <div class="setup-field">
+        <label for="p1Name">Pemain 1</label>
+        <input id="p1Name" type="text" maxlength="16" placeholder="Contoh: Dimas" autocomplete="off">
+      </div>
+      <div class="setup-field">
+        <label for="p2Name">Pemain 2</label>
+        <input id="p2Name" type="text" maxlength="16" placeholder="Contoh: Sinta" autocomplete="off">
+      </div>
+
+      <button id="btnStart" class="btn-primary btn-block" type="button">Mulai Permainan</button>
+    </div>
+  </div>
+
+  <!-- ===== MAIN GAME LAYOUT ===== -->
+  <main class="game-layout">
+
+    <aside class="player-panel" id="playerPanel0" data-player="0">
+      <div class="player-card">
+        <span class="player-avatar" id="playerAvatar0">1</span>
+        <div class="player-info">
+          <h3 id="playerName0">Pemain 1</h3>
+          <p class="player-pos">Petak <strong id="playerPos0">Mulai</strong></p>
+        </div>
+      </div>
+      <div class="player-stats">
+        <div class="stat-pill stat-correct"><span aria-hidden="true">✔</span><span id="playerCorrect0">0</span> benar</div>
+        <div class="stat-pill stat-wrong"><span aria-hidden="true">✖</span><span id="playerWrong0">0</span> salah</div>
+      </div>
+    </aside>
+
+    <section class="board-section">
+      <div class="board-wrapper" id="boardWrapper">
+        <svg id="connectorLayer" class="connector-layer" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="board-grid" id="boardGrid" role="img" aria-label="Papan ular tangga 100 petak"></div>
+        <div class="start-zone" id="startZone">
+          <span class="start-zone-label">Mulai</span>
+          <div class="start-slot" id="startSlot0"></div>
+          <div class="start-slot" id="startSlot1"></div>
+        </div>
+      </div>
+
+      <div class="controls-bar">
+        <div class="turn-banner" id="turnBanner">
+          <span class="turn-dot" id="turnDot" aria-hidden="true"></span>
+          <span id="turnText">Giliran Pemain 1</span>
+        </div>
+        <div class="dice-area">
+          <div class="dice" id="dice" aria-hidden="true">
+            <span class="dice-pips" id="dicePips" data-value="1">
+              <i class="pip pip-tl"></i><i class="pip pip-tr"></i>
+              <i class="pip pip-ml"></i><i class="pip pip-c"></i><i class="pip pip-mr"></i>
+              <i class="pip pip-bl"></i><i class="pip pip-br"></i>
+            </span>
+          </div>
+          <button id="btnRoll" class="btn-primary btn-roll" type="button">Lempar Dadu</button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="player-panel" id="playerPanel1" data-player="1">
+      <div class="player-card">
+        <span class="player-avatar" id="playerAvatar1">2</span>
+        <div class="player-info">
+          <h3 id="playerName1">Pemain 2</h3>
+          <p class="player-pos">Petak <strong id="playerPos1">Mulai</strong></p>
+        </div>
+      </div>
+      <div class="player-stats">
+        <div class="stat-pill stat-correct"><span aria-hidden="true">✔</span><span id="playerCorrect1">0</span> benar</div>
+        <div class="stat-pill stat-wrong"><span aria-hidden="true">✖</span><span id="playerWrong1">0</span> salah</div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- ===== LOG CONSOLE ===== -->
+  <section class="log-console" aria-live="polite">
+    <div class="log-console-head">
+      <span class="log-dot"></span><span class="log-dot"></span><span class="log-dot"></span>
+      <span class="log-title">log_permainan.txt</span>
+    </div>
+    <ul id="logList" class="log-list"></ul>
+  </section>
+
+  <footer class="app-footer">
+    <p>Dibuat untuk latihan mandiri mata pelajaran Teknik Komputer dan Jaringan (TKJ).</p>
+  </footer>
+</div>
+
+<!-- ===== QUESTION MODAL ===== -->
+<div id="questionModal" class="overlay" role="dialog" aria-modal="true" aria-labelledby="questionTitle" hidden>
+  <div class="overlay-panel question-panel">
+    <span class="question-tag" id="questionTag">Petak 24 · Pemain 1</span>
+    <h2 id="questionTitle" class="question-title">—</h2>
+    <div id="optionsList" class="options-list"></div>
+    <div id="feedbackBox" class="feedback-box" hidden>
+      <p id="feedbackText"></p>
+    </div>
+    <button id="btnContinue" class="btn-primary btn-block" type="button" hidden>Lanjutkan</button>
+  </div>
+</div>
+
+<!-- ===== RULES MODAL ===== -->
+<div id="rulesModal" class="overlay" hidden role="dialog" aria-modal="true" aria-labelledby="rulesTitle">
+  <div class="overlay-panel rules-panel">
+    <span class="panel-eyebrow">Panduan</span>
+    <h2 id="rulesTitle">Cara bermain</h2>
+    <ul class="rules-list">
+      <li><strong>Bergiliran melempar dadu.</strong> Klik “Lempar Dadu”, token akan maju sesuai angka yang keluar.</li>
+      <li><strong>Tangga (🪜)</strong> membawa token naik lebih cepat menuju petak 100.</li>
+      <li><strong>Ular (🐍)</strong> membuat token meluncur turun ke petak yang lebih rendah.</li>
+      <li><strong>Petak soal (❓)</strong> memunculkan pertanyaan seputar jaringan komputer. Jawaban benar → token tetap di tempat. Jawaban salah → token mundur 1–2 langkah secara acak.</li>
+      <li>Token harus mendarat <strong>tepat</strong> di petak 100 untuk menang — jika angka dadu melebihi sisa langkah, giliran berpindah tanpa bergerak.</li>
+      <li>Pemain pertama yang mencapai petak 100 dinyatakan menang.</li>
+    </ul>
+    <button id="btnCloseRules" class="btn-secondary btn-block" type="button">Tutup</button>
+  </div>
+</div>
+
+<!-- ===== WIN MODAL ===== -->
+<div id="winModal" class="overlay" hidden role="dialog" aria-modal="true" aria-labelledby="winTitle">
+  <div class="overlay-panel win-panel">
+    <div class="win-confetti" id="winConfetti" aria-hidden="true"></div>
+    <span class="win-trophy" aria-hidden="true">🏆</span>
+    <h2 id="winTitle">Menang!</h2>
+    <p id="winMessage">Pemain 1 mencapai petak 100.</p>
+    <div class="win-score" id="winScore"></div>
+    <button id="btnRestart" class="btn-primary btn-block" type="button">Main Lagi</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
